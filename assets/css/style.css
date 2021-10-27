@@ -89,9 +89,18 @@ p {
 }
 
 img {
-  max-width: 100%;
+  max-width: 16%;
 }
-
+@media (max-width: 768px){
+  img {
+    max-width: 26%;
+  }
+  }
+@media (max-width: 500px){
+  img {
+    max-width: 56%;
+  }
+}
 /* 2. Universal classes */
 .background-wrapper, .active-slider {
   position: absolute;
@@ -1007,7 +1016,7 @@ body.has-active-slider #outer-wrapper #inner-wrapper {
   top: 0;
 }
 .feature .circle i {
-  font-size: 24px;
+  font-size: 40px;
 }
 .feature .description {
   padding-left: 130px;
@@ -1205,12 +1214,12 @@ body.has-active-slider #outer-wrapper #inner-wrapper {
   z-index: 1;
 }
 #outer-wrapper #inner-wrapper #table-wrapper #row-footer {
-  bottom: 50px;
+  /* bottom: 50px; */
   position: relative;
 }
 #outer-wrapper #inner-wrapper #table-wrapper #row-content {
   display: table;
-  height: 100%;
+  height: fit-content;
   width: 100%;
 }
 #outer-wrapper #inner-wrapper #table-wrapper #row-content #navigation-wrapper {
@@ -2641,4 +2650,22 @@ body::before {
   100% {
     opacity: 1;
   }
+}
+
+
+
+
+#loading {
+  background: url('./../../spinner.gif') no-repeat center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
+}
+
+#particles-js {
+  height: 100%;
+  z-index: 1;
 }
